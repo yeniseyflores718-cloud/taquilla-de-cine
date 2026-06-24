@@ -45,6 +45,7 @@ namespace taquilla_de_cine
             //Aqui trabajara Kevin
             if (cbo_TipoBoleto.Text == "Estudiante")
             {
+                boleto = new BoletoEstudiante(precioBase, txt_matricula.Text);
                 
             }
             //Aqui Sonia
@@ -61,11 +62,20 @@ namespace taquilla_de_cine
             {
                 float pagoFinal = boleto.calcularPagoFinal();
                 MessageBox.Show("El pago final es: " + pagoFinal.ToString("C"));
+                //LimpiarCajas();
             }
             else
             {
                 MessageBox.Show("Seleccione un tipo de boleto válido.");
             }
         }
+
+        //private void LimpiarCajas()
+        //{
+        //    txt_precio.Clear();
+        //    txt_matricula.Clear();
+        //    cbo_TipoBoleto.SelectedIndex = -1;
+        //    txt_precio.Focus();
+        //}
     }
 }
