@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using taquilla_de_cine.Resources;
 
 namespace taquilla_de_cine
 {
@@ -46,12 +47,14 @@ namespace taquilla_de_cine
             //Aqui trabajara Kevin
             if (cbo_TipoBoleto.Text == "Estudiante")
             {
+                boleto = new BoletoEstudiante(precioBase, txt_matricula.Text);
                 
             }
             //Aqui Sonia
             else if (cbo_TipoBoleto.Text == "Adulto mayor")
             {
-               
+                boleto = new BoletoAdultoMayor(precioBase,txt_matricula.Text);
+
             }
             //Aqui Juan
             else if(cbo_TipoBoleto.Text == "General")
@@ -62,6 +65,7 @@ namespace taquilla_de_cine
             {
                 float pagoFinal = boleto.calcularPagoFinal();
                 MessageBox.Show("El pago final es: " + pagoFinal.ToString("C"));
+                //LimpiarCajas();
             }
             else
             {
@@ -73,5 +77,12 @@ namespace taquilla_de_cine
         {
 
         }
+        //private void LimpiarCajas()
+        //{
+        //    txt_precio.Clear();
+        //    txt_matricula.Clear();
+        //    cbo_TipoBoleto.SelectedIndex = -1;
+        //    txt_precio.Focus();
+        //}
     }
 }

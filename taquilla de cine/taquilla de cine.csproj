@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="boleto.cs" />
     <Compile Include="BoletoGeneral.cs" />
+    <Compile Include="BoletoEstudiante.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,6 +57,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\BoletoAdultoMayor.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
