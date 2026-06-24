@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using taquilla_de_cine.Resources;
 
 namespace taquilla_de_cine
 {
@@ -50,7 +51,8 @@ namespace taquilla_de_cine
             //Aqui Sonia
             else if (cbo_TipoBoleto.Text == "Adulto mayor")
             {
-               
+                boleto = new BoletoAdultoMayor(precioBase,txt_matricula.Text);
+
             }
             //Aqui Juan
             else if(cbo_TipoBoleto.Text == "General")
