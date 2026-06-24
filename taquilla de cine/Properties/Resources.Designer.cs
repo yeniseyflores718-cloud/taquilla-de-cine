@@ -63,6 +63,16 @@ namespace taquilla_de_cine.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Gemini_Generated_Image_1z8u671z8u671z8u {
+            get {
+                object obj = ResourceManager.GetObject("Gemini_Generated_Image_1z8u671z8u671z8u", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap WhatsApp_Image_2026_06_23_at_1_01_30_PM {
             get {
                 object obj = ResourceManager.GetObject("WhatsApp Image 2026-06-23 at 1.01.30 PM", resourceCulture);

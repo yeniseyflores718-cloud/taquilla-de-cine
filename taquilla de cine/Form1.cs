@@ -64,8 +64,8 @@ namespace taquilla_de_cine
             if (boleto != null)
             {
                 float pagoFinal = boleto.calcularPagoFinal();
-                MessageBox.Show("El pago final es: " + pagoFinal.ToString("C"));
-                //LimpiarCajas();
+                lbl_total.Text = pagoFinal.ToString("C");   
+                
             }
             else
             {
@@ -77,12 +77,18 @@ namespace taquilla_de_cine
         {
 
         }
-        //private void LimpiarCajas()
-        //{
-        //    txt_precio.Clear();
-        //    txt_matricula.Clear();
-        //    cbo_TipoBoleto.SelectedIndex = -1;
-        //    txt_precio.Focus();
-        //}
+        private void LimpiarCajas()
+        {
+           txt_precio.Clear();
+            txt_matricula.Clear();
+            cbo_TipoBoleto.SelectedIndex = -1;
+            txt_precio.Focus();
+            lbl_total.Text = "";    
+        }
+
+        private void btn_limpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarCajas();
+        }
     }
 }
