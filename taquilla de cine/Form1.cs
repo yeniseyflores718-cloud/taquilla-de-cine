@@ -41,6 +41,7 @@ namespace taquilla_de_cine
         private void btn_pagar_Click(object sender, EventArgs e)
         {
             float precioBase = float.Parse(txt_precio.Text);
+
             boleto boleto= null;
             //Aqui trabajara Kevin
             if (cbo_TipoBoleto.Text == "Estudiante")
@@ -55,7 +56,7 @@ namespace taquilla_de_cine
             //Aqui Juan
             else if(cbo_TipoBoleto.Text == "General")
             {
-                
+                boleto = new BoletoGeneral(precioBase);
             }
             if (boleto != null)
             {
@@ -66,6 +67,11 @@ namespace taquilla_de_cine
             {
                 MessageBox.Show("Seleccione un tipo de boleto válido.");
             }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
